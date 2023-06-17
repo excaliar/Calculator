@@ -1,0 +1,89 @@
+body {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(255, 174, 13);
+}
+
+.container{
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    height: 400px;
+    width: 250px;
+    border-style: solid;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+.display{
+    background-color: rgb(78, 77, 77);
+    display: flex;
+    justify-content: flex-end;
+    margin: 5px;
+    height: 80px;
+    border-style: solid;
+    border-radius: 20px;
+}
+
+.dis {
+    color: rgb(11, 196, 11);
+    margin-top: 25px;
+    margin-right: 20px;
+    font-size: 30px;
+}
+
+.line1 {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.line2 {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.line3 {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.line4 {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.line5 {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+}
+
+button {
+    background-color: rgb(184, 178, 178);
+    width: 44px;
+    height: 44px;
+    border-style: solid;
+    border-radius: 50px;
+}
+
+
+.keypad {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 15px;
+    box-sizing: border-box;
+}
+
+.eq {
+    width: 98px;
+}
+
+
