@@ -86,4 +86,6 @@ button {
     width: 98px;
 }
 
-
+button:hover {
+    background-color: rgb(16, 255, 231);
+}
