@@ -29,8 +29,25 @@ function operate(a, b, sign) {
     }
 }
 
+function displayOne(nums) {
+    nums.forEach(num => {
+        num.addEventListener('click', () => {
+            x = x + num.textContent;
+            if (+x > 0) {
+                dis.textContent = x;
+            };
+        });
+    });
+}
 
-x = 0;
-y = 0;
-op = ['+', '-', '*', '/']
+let x = '';
+let y = '';
+
+//number buttons
+nums = document.querySelectorAll(".num");
+//calculator display
+dis = document.querySelector(".dis");
+
+displayOne(nums);
+
 
