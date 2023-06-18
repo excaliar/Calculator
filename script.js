@@ -89,10 +89,12 @@ function reset(clear) {
 //performs equation when equals button is pressed
 function equ(equals) {
     equals.addEventListener('click', () => {
-        dis.textContent = operate(+y, +x, po);
-        x = dis.textContent;
-        po = ''
-        y = ''
+        if (x != '' && y != '' && po != '') {
+            dis.textContent = operate(+y, +x, po);
+            x = dis.textContent;
+            po = ''
+            y = ''
+        }
     })
 }
 
