@@ -81,6 +81,29 @@ function reset(clear) {
 function equ(equals) {
     equals.addEventListener('click', () => {
         dis.textContent = operate(+y, +x, po);
+        x = dis.textContent;
+        po = ''
+        y = ''
+    })
+}
+
+
+//adds functionality to turn variable into a negative number
+function negative(neg) {
+    neg.addEventListener('click', () => {
+        if (x[0] == '-' && y == '') {
+            x = x.replace('-', '');
+            dis.textContent = x;
+        } else if (x[0] == '-') {
+            x = x.replace('-', '');
+            dis.textContent = y + " " + po + " " + x;
+        } else if (x[0] != '-' && y == '') {
+            x = "-" + x;
+            dis.textContent = x
+        } else {
+            x = '-' + x;
+            dis.textContent = y + " " + po + " " + x;
+        }
     })
 }
 
@@ -90,6 +113,7 @@ let x = '';
 let y = '';
 //operand
 let po = '';
+
 
 
 //number buttons
@@ -102,11 +126,14 @@ op = document.querySelectorAll(".oper");
 clear = document.querySelector(".AC");
 //operations
 equals = document.querySelector(".eq");
+//negatives
+neg = document.querySelector('.neg');
 
 display(nums);
 operand(op);
 reset(clear);
 equ(equals);
+negative(neg)
 
 
 
