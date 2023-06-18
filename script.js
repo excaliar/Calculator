@@ -45,7 +45,7 @@ function display(nums) {
     nums.forEach(num => {
         num.addEventListener('click', () => {
             x = x + num.textContent;
-            if (po == "") {
+            if (y == "") {
                 dis.textContent = x;
             } else {
                 dis.textContent = y + " " + po + " " + x;
@@ -59,10 +59,19 @@ function display(nums) {
 function operand(oper) {
     oper.forEach(op => {
         op.addEventListener('click', () => {
-            po = op.textContent;
-            dis.textContent = x + ' ' + po;
-            y = x;
-            x = ''
+            if (y == '') {
+                po = op.textContent;
+                dis.textContent = x + ' ' + po;
+                y = x;
+                x = ''
+            }
+            else {
+                dis.textContent = operate(+y, +x, po).toString()
+                x = dis.textContent;
+                po = '';
+                y = '';
+            }
+
         });
     });
 }
